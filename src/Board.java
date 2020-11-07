@@ -33,6 +33,9 @@ public class Board {
     }
 
     public void show(HBox h) {
+        h.getChildren().clear();
+        h.setSpacing(SPACING);
+        
         for(Cell[] col : board) {
             VBox v = new VBox();
             for(Cell c : col) {
