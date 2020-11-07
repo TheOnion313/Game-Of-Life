@@ -39,4 +39,12 @@ public class Board {
             h.getChildren().add(v);
         }
     }
+
+    public void resurrect(int x, int y) {
+        this.board[x][y].resurrect();
+    }
+
+    public void kill(int x, int y) {
+        this.board[x][y].kill();
+    }
 }
