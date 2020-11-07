@@ -4,8 +4,10 @@ import javafx.scene.layout.VBox;
 import java.util.Random;
 
 public class Board {
-    static Random r = new Random();
     private Cell[][] board;
+
+    static Random r = new Random();
+    public static final int SPACING = 1;
 
     public Board(Cell[][] c) {
         this.board = new Cell[c.length][c[0].length];
