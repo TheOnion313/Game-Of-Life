@@ -38,6 +38,7 @@ public class Board {
         
         for(Cell[] col : board) {
             VBox v = new VBox();
+            v.setSpacing(SPACING);
             for(Cell c : col) {
                 c.show(v);
             }
