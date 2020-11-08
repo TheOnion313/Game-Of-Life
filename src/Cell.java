@@ -16,6 +16,12 @@ public class Cell {
         this.y = y;
     }
 
+    public Cell(Cell c) {
+        this.alive = c.isAlive();
+        this.x = c.getX();
+        this.y = c.getY();
+    }
+
     public boolean isAlive() {
         return alive;
     }

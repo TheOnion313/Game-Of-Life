@@ -25,9 +25,16 @@ public class Board {
     }
 
     public void update() {
+        Cell[][] copy = new Cell[this.board.length][this.board[0].length];
+        for(int i = 0; i < copy.length; i++) {
+            for(int j = 0; j < copy[i].length; j++) {
+                copy[i][j] = new Cell(this.board[i][j]);
+            }
+        }
+
         for (Cell[] col : board) {
             for (Cell c : col) {
-                c.update(board);
+                c.update(copy);
             }
         }
     }
